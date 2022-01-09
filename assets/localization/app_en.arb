@@ -1,0 +1,41 @@
+{
+  "appTitle": "Flutter + Supabase Scaffold",
+  "@appTitle": {
+    "description": "The title of the application"
+  },
+  "authLoginButton":"Login",
+  "authCreateAccountButton":"Create account",
+  "authTroubleSigningInButton":"Trouble logging in?",
+  "authFirstName":"First name",
+  "authLastName":"Last name",
+  "authEmail":"Email address",
+  "authPassword":"Password",
+  "authLoginViewMessage":"Welcome back",
+  "authRegisterViewMessage":"Register now",
+  "authForgotPasswordMessage":"Enter your email to reset your password",
+  "authSendResetLinkButton":"Send reset link",
+  "authResetPasswordButton":"Save new password",
+  "authPasswordResetMessage":"Enter a new password",
+  "authPasswordReset":"New password",
+  "authInvalidEmailMessage":"Please enter a valid email address",
+  "authInvalidPasswordMessage":"Please enter a password longer than 8 characters",
+  "authInvalidNameMessage":"Please enter your name",
+  "authWrongCredentialsMessage":"You've entered the wrong credentials, please try again",
+  "authPasswordResetCheckInboxMessage":"Check the inbox of {email} for a password reset link.",
+  "@authPasswordResetCheckInboxMessage":{
+    "placeholders":{
+      "email":{
+        "type":"String",
+        "example": "example@mail.com"
+      }
+    }
+  },
+  "authPasswordChangedMessage":"Your password is successfully changed.",
+  "profileEditProfileButton":"Edit profile",
+  "settingsButton":"Settings",
+  "authLogoutButton":"Logout",
+  "profileSaveProfileButton":"Save profile",
+  "profileViewTitle":"Profile",
+  "feedViewTitle":"Feed"
+
+}
