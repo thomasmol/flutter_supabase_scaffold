@@ -5,7 +5,7 @@ This is is a scaffold/template for your Flutter project that uses Supabase as a 
 
 This scaffold is made to get you started quickly with your Flutter app that uses Supabase as a backend. Stop wasting time setting up authentication pages, profile pages and localization by using this template! 
 
-## Features
+## ⚡️ Features
 * User accounts with password-based authentication
 * Logging in and registration of new users in app
 * Password recovery in app
@@ -17,7 +17,7 @@ This scaffold is made to get you started quickly with your Flutter app that uses
 * Adheres to [community best practices](https://medium.com/flutter-community/flutter-best-practices-and-tips-7c2782c9ebb5) for Flutter apps 
 
 
-## How to use
+## 🛠 How to use
 ### Setting up Supabase project
 1. Create a new Supabase project on https://app.supabase.io
 
@@ -25,7 +25,7 @@ This scaffold is made to get you started quickly with your Flutter app that uses
 
 You can run and save these SQL scripts in the SQL editor in your Supabase project.
 
-#### Set up the profile table, add columns any columns you need
+#### 👤 Set up the profile table, add columns any columns you need
 ```sql
 CREATE TABLE public.profiles (
     id uuid REFERENCES auth.users NOT NULL,
@@ -38,7 +38,7 @@ CREATE TABLE public.profiles (
 );
 ```
 
-#### Set up a storage bucket for the profile avatar/picture
+#### 🪣 Set up a storage bucket for the profile avatar/picture
 ```sql 
 insert into storage.buckets (id, name, public)
 values ('avatars', 'avatars', true);
@@ -48,14 +48,14 @@ create policy "Anyone can upload an avatar."
   with check ( bucket_id = 'avatars' );
 ```
 
-#### Set up Row Level Security (RLS) for the profiles table
+#### 🔒 Set up Row Level Security (RLS) for the profiles table
 ```sql
 ALTER TABLE
   public.profiles ENABLE ROW LEVEL SECURITY;
 
-create policy "Public profiles are viewable by everyone." on profiles for
+create policy "Public profiles are viewable by every authenticated user." on profiles for
 select
-  using (true);
+  using (auth.role() = 'authenticated');
 
 create policy "Users can insert their own profile." on profiles for
 insert
@@ -66,7 +66,7 @@ update
   using (auth.uid() = id);
 ```
 
-#### Set up realtime
+#### 🔁 Set up realtime
 ```sql
 begin;
   drop publication if exists supabase_realtime;
@@ -88,7 +88,7 @@ In your Supabase project go to ```settings > API ```, and copy the ```anon publi
 
 5. Run your Flutter app
 
-## Configuration
+## ⚙️ Configuration
 Be sure to change the name of your project in the `pubspec.yaml`, Android `AndroidManifest.xml` file and the iOS `Info.plist` file.
 
 You can easily generate app icons for all screensizes and platforms by replacing the `icon.png` image with your own in the `assets/images` directory and running the command:
@@ -99,7 +99,7 @@ Be sure to change the `icon.svg` as well.
 
 Add different locales in the `assets/localization` directory by creating `.arb` files. Use the `app_en.arb` as a template.
 
-## Package dependencies
+## 📦 Package dependencies
 
 This template depends on several third party packages:
 
@@ -117,3 +117,9 @@ This template depends on several third party packages:
   * To enable the use of `.env` files and use environment variables
 * [email_validator](https://pub.dev/packages/email_validator)
   * A simple class to validate email addresses
+
+## 👨‍💻 About author
+
+My personal [website](https://thomasmol.com)
+
+My [Twitter](https://twitter.com/thomas_a_mol)
