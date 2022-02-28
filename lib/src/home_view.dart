@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_supabase_scaffold/src/utils/auth_state.dart';
+import 'utils/auth_state.dart';
 import 'profile/profile_view.dart';
 import 'feed/feed_view.dart';
 
