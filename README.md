@@ -10,6 +10,7 @@ This scaffold is made to get you started quickly with your Flutter app that uses
 * Logging in and registration of new users in app
 * Password recovery in app
 * User profiles with first name, last name and avatar
+* Dark mode supported
 * Localization out of the box
 * Splash page, welcome page and home page to start your app
 * Protected pages with built-in redirect
@@ -84,7 +85,7 @@ flutter pub get
 4. Setup your .env file
 
 Change the filename of ```.env.example``` to ```.env```.
-In your Supabase project go to ```settings > API ```, and copy the ```anon public``` key and paste it in the ```.env``` file as the `SUPABASE_ANON_KEY` environment variable. Copy your Supabase ```URL``` and paste it in the ```.env``` file as well, as the `SUPASBASE_URL` environment variable.
+In your Supabase project go to ```settings > API ```, and copy the ```anon public``` key and paste it in the ```.env``` file as the `SUPABASE_ANON_KEY` environment variable. Copy your Supabase ```URL``` and paste it in the ```.env``` file as well, as the `SUPABASE_URL` environment variable.
 
 5. Run your Flutter app
 
@@ -120,6 +121,6 @@ This template depends on several third party packages:
 
 ## 👨‍💻 About author
 
-My personal [website](https://thomasmol.com)
+My [website](https://thomasmol.com)
 
 My [Twitter](https://twitter.com/thomas_a_mol)
